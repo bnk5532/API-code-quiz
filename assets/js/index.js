@@ -19,28 +19,43 @@
 //     change the next button to submit initials for local storage
 // }
 
-var currentIndex = 0
+// var currentIndex = 0
 
-function startQuiz() {
-    document.getElementById("question-card").classList.remove("hide")
-
-displayQuestion()
-}
-
-function displayQuestion (){
-    console.log(questions[currentIndex].question)
-}
-
-var questions = [
-  {
-    question: "What ?????",
-},
-];
-
+// function startQuiz() {
+//     document.getElementById("question-card").classList.remove("hide")
 // displayQuestion()
+// }
 
-document.getElementById("start-quiz").addEventListener("click", startQuiz)
+// function displayQuestion (){
+//     console.log(questions[currentIndex].question)
+// }
 
+// var questions = [
+//   {
+//     question: "What are you?",
+//     answers: {
+//        A: "Human",
+//        B: "Alien",
+//        C: "Sloth",
+//        D: "Unicorn"
+//   },
+//   correctAnswer: "A"
+// },
+// {
+//     question: "What planet are you from?",
+//     answers: {
+//         A: "Mars",
+//         B: "Venus",
+//         C: "Earth",
+//         D: "Pluto (not a planet anymore)"
+//     },
+//     correctAnswer: "C"
+// }
+// ];
+
+// // displayQuestion()
+
+// document.getElementById("start-quiz").addEventListener("click", startQuiz)
 
 // var scoresDiv = document.getElementById('scores')
 // scoresDiv.classList.remove("hide")
@@ -53,3 +68,62 @@ document.getElementById("start-quiz").addEventListener("click", startQuiz)
 //check if Quiz over() {
 //     if(questionsIndex)
 // }
+
+var quizContainer = document.getElementById("quiz");
+var resultsContainer = document.getElementById("results");
+var submitButton = document.getElementById("submit");
+
+function startQuiz() {
+
+    const output = []
+
+    myQuestions.forEach(currentQuestion, questionNumber) => {
+        const answers = [];
+        
+        for(letter in currentQuestion.answers){
+
+            answers.push(
+                <button>
+                    <button type="button" name="question${questionNumber}"
+                    value="${letter}"></button>
+                    ${letter} :
+                    ${currentQuestion.answers[letter]}
+                </button>
+            );
+        }
+    }
+}
+
+output.push(
+    <><div class="question"> ${currentQuestion.question}</div>
+    <div class="answers"> ${answers.join('')}</div></>
+)
+
+function showResults() {}
+
+startQuiz();
+
+submitButton.addEventListener("click", showResults);
+
+var questions = [
+  {
+    question: "What are you?",
+    answers: {
+      A: "Human",
+      B: "Alien",
+      C: "Sloth",
+      D: "Unicorn",
+    },
+    correctAnswer: "A",
+  },
+  {
+    question: "What planet are you from?",
+    answers: {
+      A: "Mars",
+      B: "Venus",
+      C: "Earth",
+      D: "Pluto (not a planet anymore)",
+    },
+    correctAnswer: "C",
+  },
+];
