@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
+    <title>API Coding Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -12,15 +12,24 @@
       <header>
         <h1>API Coding Quiz</h1>
       </header>
-      <div class="card">
+      <button id="start-quiz" class="btn"> Start Quiz</button>
+      <div class="card hide" id="question-card">
         <div class="card-header">
           <h2>Question Placeholder</h2>
         </div>
         <div class="card-body">
-          <button id="option1" class="btn">Generate Password</button>
-          <button id="option2" class="btn">Generate Password</button>
-          <button id="option3" class="btn">Generate Password</button>
-          <button id="option4" class="btn">Generate Password</button>
+          <button id="option1" class="btn">A.</button>
+          <button id="option2" class="btn">B.</button>
+          <button id="option3" class="btn">C.</button>
+          <button id="option4" class="btn">D.</button>
+          <div id="scores" class="hide">
+            <div>
+              <h3>High Scores</h3>
+              <ul>
+                <li>Brian: 50</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="card-footer">
           <button id="next" class="btn">Next</button>
