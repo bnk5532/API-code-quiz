@@ -66,7 +66,7 @@ header {
 .card-footer {
     text-align: center;
 } */
-
+/* 
 .card-footer::before {
     content: " ";
     display: block;
@@ -79,7 +79,7 @@ header {
     content: " ";
     display: block;
     clear: both;
-}
+} */
 
 .choice{
     border: none;
@@ -102,6 +102,11 @@ button{
 
 #next {
     float: right;
+    background-color: rgb(187, 184, 184);
+    border-radius: 25px;
+    font-size: 16px;
+    line-height: 22px;
+   
 }
 
 button[disabled] {
@@ -111,9 +116,22 @@ button[disabled] {
 
 
 .hide{
-    opacity:0;
+    /* opacity:0; */
+    display: none;
 }
 
+.correct {
+    background-color: green;
+}
+.wrong{
+    background-color: red;
+}
+
+#highscores-card {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
 
 @media (max-width: 690px) {
     .btn {
