@@ -1,45 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>API Coding Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>API Coding Quiz</h1>
-      </header>
-      <button id="start-quiz" class="btn"> Start Quiz</button>
-      <div class="card hide" id="question-card">
-        <div class="card-header">
-          <h2>Question Placeholder</h2>
-        </div>
-        <div class="card-body">
-          <button id="option1" class="btn">A.</button>
-          <button id="option2" class="btn">B.</button>
-          <button id="option3" class="btn">C.</button>
-          <button id="option4" class="btn">D.</button>
-          <div id="scores" class="hide">
-            <div>
-              <h3>High Scores</h3>
-              <ul>
-                <li>Brian: 50</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="card-footer">
-          <button id="next" class="btn">Next</button>
-        </div>
-      </div>
-    </div>
-    <script src="./assets/js/index.js"></script>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
   <body>
     <div class="wrapper" id="quiz">
       <header>
         <h1>JavaScript Quiz</h1>
-        <div>Time left: <span id="time">5:00</span></div>
+        <div>Time Left: <span id="time"></span></div>
       </header>
+      
       <div class="card">
         <button id="start-quiz">Begin</button>
-        <div id="highscores-card" class="hide">
-          <h2> High Scores </h2>
-          <Input> Your Initials</Input>
-        </div>
+        <p>Time is the only non-renewable resource, so let's play for the most time remaining.</p>
+        <p><strong>WARNING!</strong></p> 
+        <p>A missed question will cost you time. <em>How fast can you go?</em></p>
       </div>
+      
       <div id="quiz-elements" class="card hide">
         <h2 id="question-placeholder">Question Placeholder</h2>
         <div class="quiz-container">
@@ -69,8 +29,21 @@
         </div>
         <div class="footer-btns">
           <button id="next">Next</button>
+          <br />
         </div>
       </div>
+    
+      <div id="highscores-card" class="hide card2">
+        <h2 class = "high-score"> High Scores </h2>
+        <form name="highScoresList">
+          <input type="text" name="playerInitials"></nput>
+        </form>
+        <br />
+        <button id="hs-btn" class="answer-btns">Your Initials</button>
+        <br />
+        <ol></ol>
+      </div> 
+   
   </body>
-  <script src="assets/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
 </html>
